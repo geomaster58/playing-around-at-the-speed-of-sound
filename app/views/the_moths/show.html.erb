@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @the_moth.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @the_moth.body %>
+</p>
+
+<%= link_to 'Edit', edit_the_moth_path(@the_moth) %> |
+<%= link_to 'Back', the_moths_path %>

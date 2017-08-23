@@ -1,0 +1,2 @@
+class TheMoth < ApplicationRecord
+end

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>The Moths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @the_moths.each do |the_moth| %>
+      <tr>
+        <td><%= the_moth.title %></td>
+        <td><%= the_moth.body %></td>
+        <td><%= link_to 'Show', the_moth %></td>
+        <td><%= link_to 'Edit', edit_the_moth_path(the_moth) %></td>
+        <td><%= link_to 'Destroy', the_moth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New The Moth', new_the_moth_path %>

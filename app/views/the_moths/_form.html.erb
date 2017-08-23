@@ -1,0 +1,27 @@
+<%= form_with(model: the_moth, local: true) do |form| %>
+  <% if the_moth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(the_moth.errors.count, "error") %> prohibited this the_moth from being saved:</h2>
+
+      <ul>
+      <% the_moth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :the_moth_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body, id: :the_moth_body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
